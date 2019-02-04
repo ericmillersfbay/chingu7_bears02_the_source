@@ -1,7 +1,7 @@
 import withApollo from 'next-with-apollo'
 import ApolloClient from 'apollo-boost'
 
-const uri = 'https://the-source-prod.herokuapp.com/'
+const uri = 'https://the-source-backend.herokuapp.com/'
 
 function createClient({ headers }) {
   return new ApolloClient({
