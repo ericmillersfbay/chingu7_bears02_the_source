@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "test": "NODE_ENV=test jest --watch",
-    "pretty": "prettier --write \"**/*.js\""
+    "pretty": "prettier --write \"**/*.js\"",
+    "heroku-postbuild": "npm run build"
   },
   "husky": {
     "hooks": {
