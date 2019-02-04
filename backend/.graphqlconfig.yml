@@ -4,7 +4,7 @@ projects:
     includes: ['**/*.graphql']
     extensions:
       endpoints:
-        default: https://the-source-backend.herokuapp.com/graphql
+        default: https://the-source-backend.herokuapp.com/
   prisma:
     schemaPath: 'src/generated/prisma.graphql'
     extensions:
