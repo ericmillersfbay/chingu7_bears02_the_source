@@ -14,7 +14,7 @@ const path = '/graphql'
 const typeDefs = importSchema('./src/schema.graphql')
 const cors = {
   origin: process.env.NODE_ENV !== 'production' ? process.env.FRONTEND_DEV : process.env.FRONTEND_DEV,
-  credentials: true
+  credentials: false
 }
 
 const app = express()
