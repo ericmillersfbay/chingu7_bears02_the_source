@@ -6,8 +6,8 @@ const bcrypt = require('bcryptjs')
 const { signToken, createCookie } = require('../resolvers/permissions')
 
 let token
-const frontend = process.env.NODE_ENV !== 'production' ? process.env.FRONTEND_DEV : ''
-const backend = process.env.NODE_ENV !== 'production' ? process.env.BACKEND_DEV : ''
+const frontend = process.env.NODE_ENV !== 'production' ? process.env.FRONTEND_DEV : process.env.FRONTEND_PROD
+const backend = process.env.NODE_ENV !== 'production' ? process.env.BACKEND_DEV : process.env.BACKEND_PROD
 
 const googleOauth = new GoogleStrategy(
   {
