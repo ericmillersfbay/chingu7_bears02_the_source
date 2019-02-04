@@ -1,0 +1,82 @@
+.post-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  background: $primary;
+
+  button {
+    background: black;
+    color: gold;
+    border: 1px solid $black;
+    justify-self: flex-start;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+}
+
+.post-item {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+
+  .post-image {
+    background: white;
+    outline: 2px solid $black;
+    width: 380px;
+    height: 380px;
+    margin-left: 30px;
+    padding: auto;
+  }
+
+  .post-info {
+    height: 380px;
+    width: 900px;
+
+    display: grid;
+    color: $primary-text;
+    align-self: auto;
+    font-family: 'Akkurat Pro Bold';
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding-left: 30px;
+  }
+
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 300px;
+    font-size: 1.2rem;
+    padding-top: 10px;
+    margin-bottom: 50px;
+    color: $tertiary;
+    // align-items: center;
+  }
+
+  .detail-wrap {
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: .8rem;
+      color: grey;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .post-tags {
+    display: flex;
+    align-self: flex-end;
+    font-size: 1rem;
+
+    &>* {
+      padding: .25rem;
+      margin-right: .5rem;
+      background: $black;
+      outline: 1px solid $black;
+    }
+  }
+}

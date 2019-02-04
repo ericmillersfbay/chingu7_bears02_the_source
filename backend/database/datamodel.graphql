@@ -1,0 +1,87 @@
+type User {
+  id: ID! @unique
+  name: String!
+  email: String! @unique
+  image: String
+  password: String
+  oauthId: String
+  role: Role! @default(value: "USER")
+  posts: [Post]
+  reviews: [Review]
+  createdAt: DateTime!
+}
+
+type Post {
+  id: ID! @unique
+  language: Language!
+  tags: [String!]!
+  contentType: ContentType!
+  difficulty: Difficulty!
+  title: String!
+  description: String!
+  author: String!
+  href: String!
+  image: String
+  price: PriceRange!
+  reviews: [Review]! @relation(name: "ReviewsAboutPost", onDelete: CASCADE)
+  user: User!
+  createdAt: DateTime!
+}
+
+type Review {
+  id: ID! @unique
+  rating: Int!
+  text: String
+  user: User!
+  post: Post! @relation(name: "ReviewsAboutPost")
+  createdAt: DateTime!
+}
+
+# various programming languages
+enum Language {
+  ALL
+  AWS
+  CSS
+  CLI
+  CSHARP
+  DATABASE
+  GIT
+  HTML
+  JAVA
+  JAVASCRIPT
+  LINUX
+  MARKDOWN
+  PYTHON
+  RUBY
+}
+
+# type of content
+enum ContentType {
+  DOCUMENTATION
+  TUTORIAL
+  BOOK
+  ARTICLE
+  ACADEMY
+}
+
+# difficulty level of content
+enum Difficulty {
+  EASY
+  MID
+  HARD
+  EXPERT
+}
+
+# price range
+enum PriceRange {
+  FREE
+  LOW
+  MID
+  HIGH
+}
+
+# permission roles
+enum Role {
+  USER
+  ADMIN
+}

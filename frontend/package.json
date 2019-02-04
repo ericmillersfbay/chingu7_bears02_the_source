@@ -1,0 +1,141 @@
+{
+  "name": "the_source",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next -p 8282",
+    "build": "next build",
+    "start": "next start",
+    "test": "NODE_ENV=test jest --watch",
+    "pretty": "prettier --write \"**/*.js\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run pretty",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chingu-voyage7/Bears-Team-02.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chingu-voyage7/Bears-Team-02/issues"
+  },
+  "homepage": "https://github.com/chingu-voyage7/Bears-Team-02#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "apollo-boost": "^0.1.22",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "lodash.debounce": "^4.0.8",
+    "lodash.isequal": "^4.5.0",
+    "next": "^7.0.2",
+    "next-with-apollo": "^3.3.0",
+    "node-sass": "^4.10.0",
+    "nprogress": "^0.2.0",
+    "react": "^16.6.3",
+    "react-apollo": "^2.3.2",
+    "react-dom": "^16.6.3",
+    "react-star-rating-component": "^1.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "husky": "^1.2.0",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "url-loader": "^1.1.2"
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ]
+      },
+      "test": {
+        "presets": [
+          [
+            "next/babel",
+            {
+              "preset-env": {
+                "modules": "commonjs"
+              }
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb-base",
+    "plugins": [
+      "react",
+      "jest",
+      "jsx-a11y",
+      "import"
+    ],
+    "env": {
+      "jest/globals": true
+    },
+    "rules": {
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ],
+      "react/jsx-uses-vars": 2,
+      "no-unused-vars": 0,
+      "react/jsx-one-expression-per-line": 0,
+      "react/destructuring-assignment": 0,
+      "arrow-parens": 0,
+      "implicit-arrow-linebreak": 0,
+      "object-curly-newline": 0,
+      "semi-style": 0,
+      "semi": 0
+    }
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
+}

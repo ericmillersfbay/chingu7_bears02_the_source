@@ -1,0 +1,21 @@
+.innerheader {
+  display: grid;
+  grid-template-columns: 1fr 65% 1fr;
+  height: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $background;
+}
+
+.logo {
+  align-self: center;
+  text-align: center;
+  font-family: 'Akkurat Pro Mono';
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: $primary-text;
+}
+
+.logo__curly {
+  color: $link;
+}

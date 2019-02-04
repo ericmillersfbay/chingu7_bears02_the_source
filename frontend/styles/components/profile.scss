@@ -1,0 +1,45 @@
+.profile-component {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-content: center;
+  align-items: center;
+  background: $primary;
+  color: $primary-text;
+}
+
+h2.profile-title {
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.profile-form {
+  width: 400px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: .5em;
+  border: 1px solid #d2d2d2;
+  padding: 1em;
+}
+
+.profile-form>label {
+  grid-column: labels controls;
+  grid-row: auto;
+}
+
+.profile-form>input {
+  grid-column: controls;
+  grid-row: auto;
+  border: none;
+  padding: .5em;
+}
+
+.profile-form>button {
+  grid-column: controls;
+  background: black;
+  color: gold;
+  border: 1px solid $black;
+  justify-self: flex-end;
+  margin-top: 10px;
+  padding: 10px;
+}

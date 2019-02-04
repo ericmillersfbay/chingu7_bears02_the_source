@@ -1,0 +1,28 @@
+// 🔺 abstracts
+@import './abstracts/variables';
+@import './abstracts/functions';
+@import './abstracts/mixins';
+
+// 🏡 base
+@import './base/base';
+@import './base/typography';
+@import './base/normalize';
+@import '//base/animations';
+
+// 🧩 components
+@import './components/categories';
+@import './components/header';
+@import './components/innerheader';
+@import './components/search';
+@import './components/nav';
+@import './components/posts';
+@import './components/post';
+@import './components/profile';
+@import './components/footer';
+@import './components/review';
+@import './components/landingsearch';
+
+// 📄 pages
+@import './pages/signin';
+@import './pages/signup';
+@import './pages/home';

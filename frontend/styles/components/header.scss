@@ -1,0 +1,21 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 65%;
+  height: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $background;
+}
+
+.logo {
+  align-self: center;
+  text-align: center;
+  font-family: 'Akkurat Pro Mono';
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.logo__curly {
+  color: $link;
+}
