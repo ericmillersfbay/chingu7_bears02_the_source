@@ -1,6 +1,6 @@
 # The Source 👩‍💻
 
-The Source is a tutorial search service powered by crowd-sourced ratings and reviews.
+The Source is a tutorial search service powered by crowd-sourced ratings and reviews. That was created for Chingu 7, it may be completed in the future.
 
 ---
 
